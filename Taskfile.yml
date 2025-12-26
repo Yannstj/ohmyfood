@@ -1,0 +1,16 @@
+version: "3"
+
+tasks:
+  default:
+    desc: Lance live-server et sass --watch en parallèle
+    deps:
+      - sass
+      - server
+
+  sass:
+    desc: Compile SASS en mode watch
+    cmd: sass --watch sass/main.scss:assets/css/style.css
+
+  server:
+    desc: Lance live-server
+    cmd: live-server
